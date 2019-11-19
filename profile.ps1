@@ -1,15 +1,16 @@
+
 Import-Module posh-git
 
 # better prompt
-$GitPromptSettings.DefaultPromptSuffix = '`n$(''>'' * ($nestedPromptLevel + 1)) '
-#$GitPromptSettings.DefaultPromptPrefix = '[$(hostname)] '
+$GitPromptSettings.DefaultPromptSuffix = '`n$('' >'' * ($nestedPromptLevel + 1)) '
+#$GitPromptSettings.DefaultPromptPrefix = '[ $(hostname)] '
+#$GitPromptSettings.DefaultPromptPrefix = '$(Get-Date -f "MM-dd HH:mm:ss") '
 $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
-
 # create aliases
 Set-Alias -Name touch -Value new-item
-
-
-
+#$GitPromptSettings.DefaultPromptPrefi.ForegroundColor = [ConsoleColor]::Magenta
+#$GitPromptSettings.DefaultPromptPrefix = '$(Write-Host $env:UserName"@"$env:ComputerName -ForegroundColor Blue -NoNewLine) '
+$GitPromptSettings.DefaultPromptPrefix = '$(Write-Host $(Get-Date -f "dd-MM-yyyy HH:mm:ss")  -ForegroundColor Blue -NoNewLine) '
 # custom function
 function g {
 
