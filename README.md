@@ -1,4 +1,4 @@
-# ps-profilefibonacci
+# ps-profile
 ##  Powershell Profile Settings + GIT coolness
 
 > Playing around with powershell prompt (colors + config)
